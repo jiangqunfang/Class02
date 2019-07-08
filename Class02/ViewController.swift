@@ -27,6 +27,8 @@ class ViewController: UIViewController {
             var 买西瓜的数量 = 1
             
             
+            
+            
             if 如果看到橘子 {
                 买西瓜的数量 = 10
             }
