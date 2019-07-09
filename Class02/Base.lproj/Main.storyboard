@@ -57,8 +57,8 @@
         <!--View Controller-->
         <scene sceneID="QWi-Ub-P5u">
             <objects>
-                <viewController id="eGj-4a-Oj4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qn6-dv-ZRe">
+                <viewController id="eGj-4a-Oj4" customClass="AViewController" customModule="Class02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qn6-dv-ZRe" customClass="A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -78,6 +78,9 @@
                                     <constraint firstAttribute="height" constant="30" id="V06-Jq-Fnr"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnACllicked:" destination="eGj-4a-Oj4" eventType="touchUpInside" id="uQq-8K-UPn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,6 +90,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WWw-Y1-Xiv"/>
                     </view>
+                    <connections>
+                        <outlet property="lbXLMsg" destination="5OC-AQ-3Vb" id="0mn-cG-bp4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIj-5A-iop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
