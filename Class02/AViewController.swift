@@ -11,19 +11,40 @@ import UIKit
 class AViewController: UIViewController {
 
     @IBOutlet weak var lbXLMsg: UITextField!
+    @IBOutlet weak var btnHiBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     @IBAction func btnACllicked(_ sender: UIButton)
     {
         print("我按了啥?")
         
-        lbXLMsg.text = "我要 芒果"
+        lbXLMsg.text = "我要芒果"
         lbXLMsg.textColor = UIColor.red
+        
+       
     }
+    
+    
+    
+    
+    //.tentcent.com
+    @objc func keyboardWillShow(notification: NSNotification) {
+        let keyboardHeight = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
+        print("猜猜看：\(keyboardHeight)")
+        
+         btnHiBottomConstraint.constant = 400
+    }
+    
+    
+    
 
     /*
     // MARK: - Navigation

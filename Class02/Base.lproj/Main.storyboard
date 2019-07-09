@@ -62,20 +62,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OC-AQ-3Vb">
-                                <rect key="frame" x="20" y="831" width="306" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OC-AQ-3Vb">
+                                <rect key="frame" x="20" y="642" width="321" height="30"/>
                                 <color key="backgroundColor" red="0.66498433499999998" green="1" blue="0.86484264020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFM-od-FC5">
-                                <rect key="frame" x="334" y="831" width="48" height="30"/>
+                                <rect key="frame" x="346" y="642" width="48" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.1912842579" blue="0.8360953283" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="8b4-Ay-XgL"/>
-                                    <constraint firstAttribute="height" constant="30" id="V06-Jq-Fnr"/>
+                                    <constraint firstAttribute="height" constant="30" id="JGQ-DM-z79"/>
+                                    <constraint firstAttribute="width" constant="48" id="gQv-SE-lHc"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -85,12 +84,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WWw-Y1-Xiv" firstAttribute="trailing" secondItem="fFM-od-FC5" secondAttribute="trailing" constant="32" id="AhJ-Sw-e2G"/>
-                            <constraint firstItem="WWw-Y1-Xiv" firstAttribute="bottom" secondItem="fFM-od-FC5" secondAttribute="bottom" constant="1" id="ugk-C8-FSe"/>
+                            <constraint firstItem="5OC-AQ-3Vb" firstAttribute="leading" secondItem="WWw-Y1-Xiv" secondAttribute="leading" constant="20" id="0PD-km-g2w"/>
+                            <constraint firstItem="WWw-Y1-Xiv" firstAttribute="bottom" secondItem="fFM-od-FC5" secondAttribute="bottom" constant="190" id="MUr-sc-X5L"/>
+                            <constraint firstItem="WWw-Y1-Xiv" firstAttribute="trailing" secondItem="fFM-od-FC5" secondAttribute="trailing" constant="20" id="Rat-RZ-DUb"/>
+                            <constraint firstItem="fFM-od-FC5" firstAttribute="centerY" secondItem="5OC-AQ-3Vb" secondAttribute="centerY" id="g61-DK-Zhe"/>
+                            <constraint firstItem="fFM-od-FC5" firstAttribute="leading" secondItem="5OC-AQ-3Vb" secondAttribute="trailing" constant="5" id="xYk-iV-cZk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WWw-Y1-Xiv"/>
                     </view>
                     <connections>
+                        <outlet property="btnHiBottomConstraint" destination="MUr-sc-X5L" id="GBC-MO-dzc"/>
                         <outlet property="lbXLMsg" destination="5OC-AQ-3Vb" id="0mn-cG-bp4"/>
                     </connections>
                 </viewController>
