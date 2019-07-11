@@ -20,7 +20,6 @@ class AViewController: UIViewController {
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     @IBAction func btnACllicked(_ sender: UIButton)
     {
